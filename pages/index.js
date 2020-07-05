@@ -1,209 +1,279 @@
+import React, {Component} from 'react'
 import Head from 'next/head'
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default class Index extends Component {
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    render() {
+        return (
+            <div id="App">
+                <Head>
+                    <title>Frontend Mentor | fylo-dark-theme-landing-page</title>
+                    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png"/>
+                    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"/>
+                    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet"/>
+                </Head>
+                <main id="main-content">
+                    <header className="header">
+                        <nav className="nav-bar">
+                            <img src="/static/images/logo.svg" alt="Fylo logo" className="nav-logo"/>
+                            <ul className="links-container">
+                                <li>
+                                    <a href="#" className="nav-links">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="nav-links">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="nav-links">Sign In</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className="hero">
+                            <img src="/static/images/illustration-intro.png" alt="Accessing files" className="file-illustration"/>
+                            <h1 className="heading-title title">
+                                All your files in one secure location, accessible anywhere.
+                            </h1>
+                            <p className="support-text">
+                                Fylo stores all your most important files in one secure location.
+                                <br/>
+                                Access them wherever you need, share and collaborate with
+                                <br/>
+                                friends family, and co-workers.
+                            </p>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+                            <a href="index.html" className="btn btn-blue">Get Started</a>
+                        </div>
+                    </header>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                    <main className="main-section">
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                        <section className="features">
+                            <div className="feature-container">
+                                <div className="feature">
+                                    <img src="/static/images/icon-access-anywhere.svg" alt="Laptop and Computer" className="feature-icon"/>
+                                    <h2 className="feature-title">Access your files, anywhere</h2>
+                                    <p className="feature-desc">
+                                        The ability to use a smartphone, tablet, or computer to access your account means your 
+                                                    files follow you everywhere.
+                                    </p>
+                                </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                                <div className="feature">
+                                    <img src="/static/images/icon-security.svg" alt="Secured Icon" className="feature-icon"/>
+                                    <h2 className="feature-title">Security you can trust</h2>
+                                    <p className="feature-desc">
+                                        2-factor authentication and user-controlled encryption are just a couple of the security 
+                                                    features we allow to help secure your files.
+                                    </p>
+                                </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                                <div className="feature">
+                                    <img src="/static/images/icon-collaboration.svg" alt="Collaboration icon" className="feature-icon"/>
+                                    <h2 className="feature-title">Real-time collaboration</h2>
+                                    <p className="feature-desc">
+                                        Securely share files and folders with friends, family and colleagues for live collaboration. 
+                                                    No email attachments required.
+                                    </p>
+                                </div>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+                                <div className="feature">
+                                    <img src="/static/images/icon-any-file.svg" alt="Store any file icon" className="feature-icon"/>
+                                    <h2 className="feature-title">Store any type of file</h2>
+                                    <p className="feature-desc">
+                                        Whether you're sharing holidays or photos or work documents, Fylo has you covered allowing for all file 
+                                                   types to be securely stored and shared.
+                                    </p>
+                                </div>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                            </div>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                        </section>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+                        <section className="card">
+                            <div className="card-container">
+                                <img src="/static/images/illustration-stay-productive.png" alt="Stay productive" className="card-illustration"/>
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+                                <div className="textblock">
+                                    <h2 className="title">Stay productive,
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
+                                        <span>wherever you are</span>
+                                    </h2>
+                                    <p className="support-text">Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+                                                    storage needs.</p>
+                                    <p className="support-text">Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+                                                    attachments required.</p>
+                                    <a href="" className="special-link">See how Fylo works
+                                        <img src="/static/images/icon-arrow.svg" alt="some arrow" className="arrow"/>
+                                    </a>
+                                </div>
+                            </div>
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
+                        </section>
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
+                        <section className="testimonials">
 
-        .title,
-        .description {
-          text-align: center;
-        }
+                            <div className="testimonial-container">
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
+                                <div className="testimony-card">
+                                    <p className="testimony-text">
+                                        Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                                                    become a well-oiled collaboration machine.
+                                    </p>
+                                    <div className="profile">
+                                        <img src="/static/images/profile-1.jpg" alt="user 1" className="icon-profile"/>
+                                        <div className="name-and-position">
+                                            <span className="name">Satish Patel</span>
+                                            <span className="position">
+                                                Founder and CEO, Huddle</span>
+                                        </div>
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
+                                    </div>
+                                </div>
 
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
+                                <div className="testimony-card">
+                                    <p className="testimony-text">
+                                        Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                                                    become a well-oiled collaboration machine.
+                                    </p>
+                                    <div className="profile">
+                                        <img src="/static/images/profile-2.jpg" alt="user 1" className="icon-profile"/>
+                                        <div className="name-and-position">
+                                            <span className="name">
+                                                Bruce McKenzie
+                                            </span>
+                                            <span className="position">
+                                                Founder and CEO, Huddle
+                                            </span>
+                                        </div>
 
-          max-width: 800px;
-          margin-top: 3rem;
-        }
+                                    </div>
+                                </div>
 
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
+                                <div className="testimony-card">
+                                    <p className="testimony-text">
+                                        Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                                                    become a well-oiled collaboration machine.
+                                    </p>
+                                    <div className="profile">
+                                        <img src="/static/images/profile-3.jpg" alt="user 1" className="icon-profile"/>
+                                        <div className="name-and-position">
+                                            <span className="name">Iva Boyd</span>
+                                            <span className="position">
+                                                Founder and CEO, Huddle
+                                            </span>
+                                        </div>
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
+                                    </div>
+                                </div>
 
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
 
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
+                            </div>
+                        </section>
 
-        .logo {
-          height: 1em;
-        }
+                        <section className="email">
 
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
+                            <div className="color-change1"></div>
+                            <div className="color-change2"></div>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
+                            <div className="email-card">
+                                <h2 className="title">Get early access today</h2>
+                                <p className="support-text">
+                                    It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+                                              questions, our support team would be happy to help you.</p>
+                                <div className="input-container">
+                                    <input type="email" placeholder="email@example.com"/>
+                                    <a href="" className="btn email-btn">Get Started for Free</a>
+                                </div>
+                            </div>
 
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+                        </section>
+
+                        <footer className="footer">
+
+                            <div className="footer-items-container">
+                                <img src="/static/images/logo.svg" alt="footer-logo" className="footer-logo"/>
+
+                                <div className="text-items">
+
+                                    <div className="icon-address">
+                                        <img src="/static/images/icon-location.svg" alt="location address"/>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                                          elit, sed do eiusmod tempor incididunt ut labore et 
+                                                          dolore magna aliquas</p>
+                                    </div>
+
+                                    <ul className="item-list">
+                                        <li className="with-icon">
+                                            <img src="/static/images/icon-phone.svg" alt="phone icon" className="footer-icon"/>
+                                            <span>
+                                                +1-543-123-4567</span>
+                                        </li>
+                                        <li className="with-icon">
+                                            <img src="/static/images/icon-email.svg" alt="email icon" className="footer-icon"/>
+                                            <span>
+                                                example@fylo.com
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul className="item-list">
+                                        <li>
+                                            <a href="" className="footer-links">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="footer-links">Jobs</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="footer-links">Press</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="footer-links">Blog</a>
+                                        </li>
+                                    </ul>
+
+                                    <ul className="item-list">
+                                        <li>
+                                            <a href="" className="footer-links">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="footer-links">Terms</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="footer-links">Privacy</a>
+                                        </li>
+                                    </ul>
+
+                                    <div className="social-icons">
+                                        <a href="" className="social-links">
+                                            <i className="fab fa-facebook-f fa-2x"></i>
+                                        </a>
+                                        <a href="" className="social-links">
+                                            <i className="fab fa-twitter fa-2x"></i>
+                                        </a>
+                                        <a href="" className="social-links">
+                                            <i className="fab fa-instagram fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </footer>
+                    </main>
+
+                    <div className="sign">
+                        <p className="attribution">
+                            Challenge by
+                            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                                      Coded by
+                            <a href="#">Gerard Gueco</a>.
+                        </p>
+                    </div>
+                </main>
+            </div>
+        )
+    }
 }
